@@ -7,19 +7,18 @@
 </head>
 <script>
     function calcular() {
-        let jovens = parseFloat(jovens.value)
-        let adultos = parseFloat(adultos.value)
-        let idosos = parseFloat(idosos.value)
-        let media = parseFloat ((jovens + adultos + idosos) / 3)
+        let jov = parseFloat(jovens.value)
+        let adul = parseFloat(adultos.value)
+        let idos = parseFloat(idosos.value)
+        let media = (jov + adul + idos) / 3
+        media_txt.innerText = media
 
-
-        let resultado = media.value
-        
-
-        if (resultado <= 5) {
-            resultado.innerText = "Existem vagas disponíveis"
+        if (media <= 5) {
+            result.innerText = "Existem vagas disponíveis"
+            
         } else {
-            resultado.innerText = "Não existem vagas disponíveis"
+            result.innerText = "Não existem vagas disponíveis"
+            
         }
     }
 </script>
@@ -33,9 +32,10 @@
         <div> <input type="number" id="adultos" placeholder="Adultos"></div>
         <div> <input type="number" id="idosos" placeholder="Idosos" ></div>
         <div> <button onclick="calcular()"> Calcular </button> </div>
-        <div> <label> A Média é de:</label>
-            <label id="resultado"> </label>
-            <div> <label> Situação: </label>    </div>
+        <div> <label> A Média é de: </label>
+            <label id="media_txt"> </label>
+            <div> <label> Situação: </label>
+                <label id="result"> </label>   </div>
         </div>
     </div>
 </body>
