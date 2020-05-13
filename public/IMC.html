@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do IMC</title>
+    <script>
+        function imc(){
+            var N1 = parseFloat(campo1.value) /((parseFloat(campo2.value)*parseFloat(campo2.value))/10000)
+            var n2 = Math.round(N1*10)/10
+            imcc.innerText = n2
+            //var b = a.concat(n2)
+            //window.alert(b)
+        }
+        function classificar(){
+            var N1 = parseFloat(campo1.value) /((parseFloat(campo2.value)*parseFloat(campo2.value))/10000)
+            var n2 = Math.round(N1*10)/10
+            if (n2 == NaN){ resultado.innerText = "Calcular o IMC"}
+            else{if (n2<= 18){resultado.innerText = "abaixo do peso"}
+            else{if (n2> 18 && n2<=25){resultado.innerText = "ideal"}
+            else{if (n2> 25 && n2<=30){resultado.innerText = "sobrepeso"}
+            else{if (n2> 30 && n2<=35){resultado.innerText = "obesidade 1"}
+            else{if (n2> 35 && n2<=40){resultado.innerText = "obesidade 2"}
+            else{if (n2> 40){resultado.innerText = "obesidade 3"}
+            }}}}}}
+            
+            }
+
+    </script>
+
+</head>
+<body>
+    <h1>Calculo do IMC</h1>
+    <div><input id="campo1" placeholder="Peso (kg)" type="number"></div>
+    <div><input id="campo2" placeholder="Altura (cm)" type="number"></div>
+    <div>
+        <button onclick="imc()">Calcular IMC</button></div>
+        <div><label> Seu IMC é de:</label> <label id="imcc"> </label></div>
+        <div><button onclick="classificar()">Classificar</button>
+        <div><label> Está classificado em:</label> <label id="resultado"> </label></div>
+    </div>
+</body>
+</html>

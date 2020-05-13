@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Calculadora Maior</title>
+    <script>
+    function maior(){
+        var n1 = parseFloat(n01.value)
+        var n2 = parseFloat(n02.value)
+        var text1 = "O maior valor é o "
+        if (n1 > n2){
+            var text2 = text1.concat(n1)
+        } else{ if (n1==n2){
+            var text2 = "Os números são iguais"}
+            else{
+                var text2 = text1.concat(n2)
+            }
+        }
+
+
+        window.alert(text2)
+    }
+    
+    </script>
+</head>
+<body>
+    <h1>Calculadora Maior</h1><br>
+    <div> <input type="number" id="n01" placeholder="Número 01" ></div>
+    <div> <input type="number" id="n02" placeholder="Número 02"></div>
+    <div><button onclick="maior()"> Maior</button></div>
+</body>
+</html>
