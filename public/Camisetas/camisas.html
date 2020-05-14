@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Pedidos de Camisetas</title>
+    <script>
+      function calcular () {
+            let p = parseFloat(camisetap.value)
+            let m = parseFloat(camisetam.value)
+            let g = parseFloat(camisetag.value)
+            let valorp = 10
+            let valorm = 12
+            let valorg = 15
+
+            let total = p + m + g
+            let valortotal = valorp * p + valorm * m + valorg * g
+
+            resultado.innerText = ("Camisetas:"+total+" | Valor total da compra R$:"+valortotal)
+
+
+
+
+
+      }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Preços</h1>
+    <div class="p">
+        <label>Quantidade P (R$10,00)</label><br>
+        <input id="camisetap"  type="number">
+    </div>
+    <div class="m">
+        <label>Quantidade M (R$12,00)</label><br>
+        <input id="camisetam"  type="number">
+    </div>
+    <div class="g">
+        <label>Quantidade G (R$15,00)</label><br>
+        <input id="camisetag"  type="number">
+    </div>
+    <div class="input">
+        <input type="button" onclick="calcular()" value="Salvar pedido">
+    </div>
+    <div id="result">
+        <label id="resultado"> </label>
+    </div>
+    
+
+
+
+</body>
+</html>
