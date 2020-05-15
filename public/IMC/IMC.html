@@ -15,7 +15,7 @@
         function classificar(){
             var N1 = parseFloat(campo1.value) /((parseFloat(campo2.value)*parseFloat(campo2.value))/10000)
             var n2 = Math.round(N1*10)/10
-            if (n2 == NaN){ resultado.innerText = "Calcular o IMC"}
+            if (n2 = "NaN"){ resultado.innerText = "Calcular o IMC"}
             else{if (n2<= 18){resultado.innerText = "Abaixo do peso"}
             else{if (n2> 18 && n2<=25){resultado.innerText = "Ideal"}
             else{if (n2> 25 && n2<=30){resultado.innerText = "Sobrepeso"}
