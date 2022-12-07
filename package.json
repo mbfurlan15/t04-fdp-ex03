@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/mbfurlan15/t04-fdp-ex03#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.18.2"
   }
 }
